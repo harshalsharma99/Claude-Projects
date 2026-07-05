@@ -7,36 +7,20 @@ food/product recommendations, workshops, and more).
 Plain HTML/CSS/JS — no build step, no dependencies. Open `index.html` in a
 browser or deploy as-is to any static host.
 
-## Before you launch: 2 things to configure
+## Contact setup (already configured)
 
-### 1. WhatsApp number
-In `index.html`, find the "Chat on WhatsApp" button and replace the
-placeholder number with your real one (country code, no `+` or spaces):
+- **WhatsApp**: button links to `+971 55 470 9197`.
+- **Contact form**: posts to Formspree (`https://formspree.io/f/xvzjlvog`),
+  which forwards submissions to `preesplaybook@gmail.com`. Make sure that
+  inbox has confirmed the Formspree verification email, or submissions
+  won't be delivered.
+- **Fallback email** shown on the page: `preesplaybook@gmail.com`.
 
-```html
-<a class="btn btn-whatsapp" href="https://wa.me/10000000000?text=...">
-```
-
-Example: for +1 555 123 4567 → `https://wa.me/15551234567?text=...`
-
-### 2. Contact form → your email (Formspree)
-The contact form posts to Formspree, a free service that forwards form
-submissions straight to your inbox — no backend required.
-
-1. Go to https://formspree.io and sign up (free tier is plenty).
-2. Create a new form, and copy the form endpoint it gives you
-   (looks like `https://formspree.io/f/abcd1234`).
-3. In `index.html`, replace `YOUR_FORM_ID` in this line with your real ID:
-   ```html
-   <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-   ```
-4. Confirm your email address when Formspree sends the verification message.
-
-That's it — submissions will land in your inbox, and the page shows a
-friendly confirmation message without leaving the site.
-
-Also update the fallback email address (`hello@preesplayroom.com`) in
-`index.html` and in `js/main.js`'s error message to your real inbox.
+To change any of these later: the WhatsApp link and fallback email live in
+`index.html` (search for `wa.me` and `preesplaybook@gmail.com`); the error
+message using the fallback email is in `js/main.js`. To point the form at a
+different inbox, create a new form at formspree.io and swap the `action`
+URL in `index.html`.
 
 ## Deploying
 

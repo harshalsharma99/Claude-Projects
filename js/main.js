@@ -39,7 +39,7 @@ contactForm.addEventListener("submit", async (event) => {
     }
   } catch (err) {
     formStatus.textContent =
-      "Something went wrong. Please email us directly at hello@preesplayroom.com.";
+      "Something went wrong. Please email us directly at preesplaybook@gmail.com.";
     formStatus.style.color = "#c96449";
   }
 });
