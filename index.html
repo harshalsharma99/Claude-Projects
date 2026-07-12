@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,8 +29,8 @@
     </button>
     <nav class="primary-nav" id="primaryNav">
       <a href="#story">Our Story</a>
-      <a href="#sessions">Sessions</a>
-      <a href="#spaces">Play Spaces</a>
+      <a href="#sessions">A Session</a>
+      <a href="#parents">For Parents</a>
       <a href="#values">Values</a>
       <a href="#coming-soon">Coming Soon</a>
       <a href="#contact" class="nav-cta">Book a Session</a>
@@ -40,188 +40,150 @@
 
 <main id="main">
 
+  <!-- Hero -->
   <section class="hero" id="top">
-    <div class="container hero-inner">
-      <p class="eyebrow">A cozy, home-based play experience</p>
-      <h1>Where little explorers play, and grown-ups reconnect.</h1>
-      <p class="hero-sub">Small-group, screen-free play sessions for toddlers &amp; preschoolers — designed so children can discover at their own pace, while parents enjoy real conversation and community.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Book a Session</a>
-        <a href="#story" class="btn btn-ghost">Learn Our Story</a>
+    <div class="container hero-grid">
+      <div class="hero-inner">
+        <p class="eyebrow">A cozy, home-based play experience</p>
+        <h1>Where little explorers <em>play</em>, and grown-ups reconnect.</h1>
+        <p class="hero-sub">Small-group, screen-free play sessions for toddlers &amp; preschoolers — thoughtfully curated with Montessori-inspired, wooden toys, so children discover at their own pace while parents enjoy real conversation.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a Session</a>
+          <a href="#story" class="btn btn-ghost">Learn Our Story</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-card photo-single">
+          <img src="assets/photos/hero-photo.jpg" alt="A toddler sitting on a rug, focused on stacking a wooden ring toy, surrounded by Montessori shelves">
+        </div>
+        <div class="trust-badge">
+          <span class="icon-badge" style="margin:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
+          </span>
+          Home-based · Small groups
+        </div>
       </div>
     </div>
-    <div class="hero-blob" aria-hidden="true"></div>
+
+    <!-- trust strip -->
+    <div class="container">
+      <ul class="trust-strip">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 90-minute sessions</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M2.5 19c.5-3.3 3-5.5 5.5-5.5s5 2.2 5.5 5.5"/><path d="M13.5 14c2 .1 4 1.9 4.5 5"/></svg> Ages 1–3</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.5-9C.8 7.3 3 4 6.5 4c2 0 3.5 1.2 4.5 2.7C12 5.2 13.5 4 15.5 4 19 4 21.2 7.3 19.5 11 17 15.6 12 20 12 20z"/></svg> Small groups, always</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg> Parent accompanied</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- Our Story + why small groups -->
   <section class="section" id="story">
     <div class="container two-col">
       <div>
         <p class="eyebrow">Our Story</p>
         <h2>Not a bigger space. A warmer one.</h2>
-        <p>Pree's Playroom was born from a simple belief: young children don't always need bigger spaces, louder entertainment, or more toys. What they truly need is a safe, nurturing environment where they can explore freely, while parents have the opportunity to slow down, connect, and build meaningful relationships with other families.</p>
-        <p>In today's busy world, finding intimate, child-friendly spaces that feel warm, welcoming, and personal can be difficult. We bridge that gap with thoughtfully curated play experiences inside a cozy home environment — where play happens naturally, through curiosity and shared discovery, not structured lessons.</p>
+        <p>Pree's Playroom was born from a simple belief: young children don't need bigger spaces, louder entertainment, or more toys. They need a safe, nurturing environment to explore freely — while parents slow down and build real relationships with other families.</p>
+        <p>That's why every session stays intentionally small: children settle comfortably, get individual attention, and explore without feeling overwhelmed, while parents actually get to talk to one another.</p>
       </div>
-      <div class="card-stack">
-        <div class="info-card">
-          <h3>Our Vision</h3>
-          <p>A warm, trusted community where children grow through meaningful play and families create lasting friendships — a place that feels like coming home.</p>
-        </div>
-        <div class="info-card">
-          <h3>Our Mission</h3>
-          <p>To create beautiful, intimate play experiences that encourage exploration, creativity, confidence, and social connection — while supporting parents with a welcoming community.</p>
-        </div>
-      </div>
+      <figure class="photo-feature">
+        <img src="assets/photos/story-small-groups.jpg" alt="An adult sitting with four young children of different backgrounds, playing together with a wooden rainbow stacking toy">
+        <figcaption>Every session: one caring adult, a small circle of friends.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="section alt" id="different">
-    <div class="container">
-      <p class="eyebrow center">What Makes Us Different</p>
-      <h2 class="center">Small by design, not by accident</h2>
-      <div class="grid-3">
-        <div class="feature">
-          <span class="feature-icon" aria-hidden="true">👶</span>
-          <h3>Intentionally small groups</h3>
-          <p>Children settle comfortably, explore without feeling overwhelmed, and get individual attention.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon" aria-hidden="true">🎨</span>
-          <h3>Open-ended play invitations</h3>
-          <p>Every activity is prepared to encourage exploration — never directed toward one "right" outcome.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon" aria-hidden="true">🌿</span>
-          <h3>Calm, screen-free spaces</h3>
-          <p>No screens, no noisy attractions, no overstimulation — just simple, meaningful play.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="philosophy">
-    <div class="container two-col reverse">
-      <div class="philosophy-list-wrap">
-        <p class="eyebrow">Our Philosophy</p>
-        <h2>Play doesn't have to be complicated to be meaningful</h2>
-        <ul class="check-list">
-          <li>Children learn best through play.</li>
-          <li>Every child develops at their own pace.</li>
-          <li>Open-ended toys inspire imagination.</li>
-          <li>Sensory experiences build confidence and curiosity.</li>
-          <li>Parents deserve a supportive community, just as children need friends.</li>
-        </ul>
-      </div>
-      <div>
-        <p>We embrace a gentle, child-led approach where exploration matters more than perfection — and we hold onto that philosophy in everything we prepare for your family.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- A session, in two moments -->
   <section class="section alt" id="sessions">
     <div class="container">
       <p class="eyebrow center">What Happens During a Session</p>
-      <h2 class="center">About 90 minutes of free exploration &amp; guided invitations</h2>
-      <div class="activity-grid">
-        <span class="activity">🧺 Sensory play</span>
-        <span class="activity">🧩 Montessori-inspired toys</span>
-        <span class="activity">🧲 Magnetic tiles</span>
-        <span class="activity">🧱 Building blocks</span>
-        <span class="activity">🪵 Wooden toys</span>
-        <span class="activity">📚 Books &amp; storytelling</span>
-        <span class="activity">🧠 Puzzles</span>
-        <span class="activity">🎭 Pretend play</span>
-        <span class="activity">🎵 Music &amp; movement</span>
-        <span class="activity">🫧 Bubble time</span>
-        <span class="activity">🎁 Take-home keepsakes</span>
+      <h2 class="center">About 90 minutes, never quite the same twice</h2>
+      <div class="session-pair">
+        <figure class="photo-feature">
+          <img src="assets/photos/session-reading.jpg" alt="A child sitting inside a cozy teepee reading a picture book, with a book display shelf nearby">
+          <figcaption>Story time in the reading nook</figcaption>
+        </figure>
+        <figure class="photo-feature">
+          <img src="assets/photos/session-sensory.jpg" alt="A toddler exploring a sensory bin filled with rice, using wooden scoops and tools">
+          <figcaption>Hands-on sensory play</figcaption>
+        </figure>
       </div>
-      <p class="center note">Activities vary from session to session, so every visit feels new.</p>
+      <div class="activity-grid">
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z"/><path d="M5 19c0-5 3-9 8-11"/></svg> Sensory play</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 3v9M12 12l8-4.5M12 12l-8-4.5"/></svg> Wooden &amp; Montessori toys</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l6 6-6 6-6-6 6-6z"/><path d="M12 10l6 6-6 6-6-6 6-6z"/></svg> Magnetic tiles</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.67 4.67 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13z"/><path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13z"/></svg> Books &amp; storytelling</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h4v2.2a1.8 1.8 0 1 0 0 3.6V12h3a1.8 1.8 0 1 1 0 3.6H16v3a1.8 1.8 0 1 1-3.6 0H9v-4H6.2a1.8 1.8 0 1 1 0-3.6H9V4z"/></svg> Puzzles &amp; pretend play</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg> Music &amp; movement</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="13" r="5"/><circle cx="17" cy="7" r="2.5"/></svg> Bubble time</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.5-9C.8 7.3 3 4 6.5 4c2 0 3.5 1.2 4.5 2.7C12 5.2 13.5 4 15.5 4 19 4 21.2 7.3 19.5 11 17 15.6 12 20 12 20z"/></svg> Take-home keepsakes</span>
+      </div>
     </div>
   </section>
 
+  <!-- Joy banner -->
+  <section class="joy-banner">
+    <img src="assets/photos/joy-banner.jpg" alt="A joyful toddler laughing while pouring water during sensory water play">
+    <div class="joy-banner-caption">
+      <p>Real joy. Real connection.</p>
+    </div>
+  </section>
+
+  <!-- Designed for parents -->
   <section class="section" id="parents">
-    <div class="container two-col">
+    <div class="container two-col reverse">
+      <figure class="photo-feature">
+        <img src="assets/photos/parents-community.jpg" alt="Three mothers of different backgrounds chatting and laughing over coffee while their children play with wooden toys nearby">
+        <figcaption>Parents connect, while little ones play close by.</figcaption>
+      </figure>
       <div>
         <p class="eyebrow">Designed for Parents Too</p>
         <h2>Because raising children is easier when you're not doing it alone</h2>
-        <p>Pree's Playroom isn't only for children. It's also a space where parents can meet other local families, share experiences, build friendships, relax with a coffee or tea, and feel part of a supportive community — while their little ones play just a few feet away.</p>
-      </div>
-      <div>
-        <p class="eyebrow">Who We Welcome</p>
-        <ul class="check-list">
-          <li>Toddlers, approximately 1–3 years</li>
-          <li>Stay-at-home parents</li>
-          <li>New mothers</li>
-          <li>Families new to the community</li>
-          <li>Parents seeking meaningful, screen-free play</li>
-        </ul>
-        <p class="note">Children attend alongside a parent or caregiver, making every session a shared experience.</p>
+        <p>Pree's Playroom is also a space for parents — to meet other local families, share experiences, relax with a coffee or tea, and feel part of a community. It's ideal for stay-at-home parents, new mothers, and families new to the area seeking meaningful, screen-free play.</p>
+        <p class="note">Parents remain with their children throughout every session, so every little explorer feels secure while discovering the space.</p>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="spaces">
-    <div class="container">
-      <p class="eyebrow center">Our Play Spaces</p>
-      <h2 class="center">Every corner has a purpose</h2>
-      <div class="grid-3">
-        <div class="feature"><span class="feature-icon">🧺</span><h3>Sensory Corner</h3></div>
-        <div class="feature"><span class="feature-icon">📖</span><h3>Reading Nook</h3></div>
-        <div class="feature"><span class="feature-icon">🧱</span><h3>Building Zone</h3></div>
-        <div class="feature"><span class="feature-icon">🪄</span><h3>Open-ended Toy Area</h3></div>
-        <div class="feature"><span class="feature-icon">🤫</span><h3>Quiet Corner</h3></div>
-        <div class="feature"><span class="feature-icon">🎶</span><h3>Music &amp; Movement Space</h3></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="safety">
-    <div class="container two-col">
-      <div>
-        <p class="eyebrow">Safety First</p>
-        <h2>A calm, prepared environment — every single time</h2>
-        <p>Our home-based playroom is thoughtfully prepared before every session, with age-appropriate materials, carefully arranged play spaces, and small group sizes that allow for a calm and enjoyable experience.</p>
-        <p>Parents remain with their children throughout the session, ensuring every little explorer feels secure while discovering the space.</p>
-      </div>
-      <div class="info-card highlight">
-        <h3>Our Promise</h3>
-        <p>Every session is thoughtfully prepared with love, care, and attention to detail. Whether it's your child's first visit or your tenth, we want every family to leave with happy memories, new friendships, and a sense of belonging.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt" id="values">
+  <!-- Values (condensed) -->
+  <section class="section alt values-section" id="values">
     <div class="container">
       <p class="eyebrow center">Our Values</p>
       <h2 class="center">What guides every session we plan</h2>
-      <div class="grid-3 values-grid">
-        <div class="feature"><span class="feature-icon">🤝</span><h3>Connection</h3><p>Building friendships between children and families.</p></div>
-        <div class="feature"><span class="feature-icon">🔍</span><h3>Curiosity</h3><p>Encouraging children to explore without limits.</p></div>
-        <div class="feature"><span class="feature-icon">🎨</span><h3>Creativity</h3><p>Open-ended materials that inspire imagination.</p></div>
-        <div class="feature"><span class="feature-icon">🌿</span><h3>Calm</h3><p>Peaceful spaces that feel welcoming, not overwhelming.</p></div>
-        <div class="feature"><span class="feature-icon">👪</span><h3>Community</h3><p>Supporting parents while children play.</p></div>
-        <div class="feature"><span class="feature-icon">✨</span><h3>Intentional Play</h3><p>Quality experiences over quantity of toys.</p></div>
+      <div class="activity-grid">
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.5-9C.8 7.3 3 4 6.5 4c2 0 3.5 1.2 4.5 2.7C12 5.2 13.5 4 15.5 4 19 4 21.2 7.3 19.5 11 17 15.6 12 20 12 20z"/></svg> Connection</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2z"/></svg> Curiosity</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.6L20 11l-5.8 2.4L12 19l-2.2-5.6L4 11l5.8-2.4L12 3z"/></svg> Creativity</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg> Calm</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M2.5 19c.5-3.3 3-5.5 5.5-5.5s5 2.2 5.5 5.5"/><path d="M13.5 14c2 .1 4 1.9 4.5 5"/></svg> Community</span>
+        <span class="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-3 2-5 6-5 0 3-1.5 5.5-6 5z"/><path d="M12 12c0-3-2-5-6-5 0 3 1.5 5.5 6 5z"/></svg> Intentional Play</span>
       </div>
     </div>
   </section>
 
+  <!-- Coming soon -->
   <section class="section coming-soon" id="coming-soon">
     <div class="container">
       <p class="eyebrow center">More Than Just Playdates</p>
       <h2 class="center">Pree's Playroom is chapter one of Pree's Playbook</h2>
       <p class="center lede">As we grow, we're building toward a fuller playbook for families — always staying true to meaningful play and genuine connection.</p>
+    </div>
+    <figure class="banner-photo">
+      <img src="assets/photos/community-banner.jpg" alt="A wide view of a playroom with several parents and children playing together with wooden toys">
+    </figure>
+    <div class="container">
       <div class="grid-3">
         <div class="feature">
-          <span class="feature-icon">🧠</span>
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A3 3 0 0 0 8 17a3 3 0 0 0 5 0V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8A3 3 0 0 1 16 17a3 3 0 0 1-1-.2"/></svg></span>
           <h3>Child psychology sessions</h3>
           <p>Online sessions and resources to support parents through every stage of early childhood.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">🍎</span>
+          <span class="icon-badge olive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8c-3 0-5.5 2.5-5.5 6S9 20 12 20s5.5-2.5 5.5-6S15 8 12 8z"/><path d="M12 8c0-2 1-3.5 2.5-4"/><path d="M9.5 5.5c1 0 2 .5 2.5 1.5"/></svg></span>
           <h3>Baby food &amp; product picks</h3>
           <p>Curated, trusted recommendations for baby food and everyday products families actually need.</p>
         </div>
         <div class="feature">
-          <span class="feature-icon">🎉</span>
+          <span class="icon-badge gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l5-13 10 8-13 5z"/><path d="M14 6l1-3M18 9l3-1M16 3l1 2"/></svg></span>
           <h3>Themed sessions &amp; events</h3>
           <p>Weekly themed play, messy play mornings, storytime, parent meet-ups, birthdays &amp; workshops.</p>
         </div>
@@ -229,12 +191,13 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section class="section contact-section" id="contact">
     <div class="container two-col">
       <div>
         <p class="eyebrow">Get In Touch</p>
         <h2>Come play with us</h2>
-        <p>Message us on WhatsApp for the fastest reply, or send a note below and we'll get back to you by email.</p>
+        <p>Spots are limited to keep every session small and personal. Message us on WhatsApp for the fastest reply, or send a note below and we'll get back to you by email.</p>
 
         <a class="btn btn-whatsapp" href="https://wa.me/971554709197?text=Hi%20Pree%27s%20Playroom%2C%20I%27d%20like%20to%20know%20more%20about%20a%20session." target="_blank" rel="noopener noreferrer">
           <span aria-hidden="true">💬</span> Chat on WhatsApp
