@@ -28,9 +28,8 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir _site
-          cp index.html _site/
-          cp -r css _site/
-          cp -r js _site/
+          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' \
+            --exclude='README.md' --exclude='CLAUDE.md' ./ _site/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
