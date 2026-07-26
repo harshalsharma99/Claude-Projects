@@ -53,3 +53,18 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const whatsappBubble = document.getElementById("whatsappBubble");
+const whatsappBubbleClose = document.getElementById("whatsappBubbleClose");
+const WHATSAPP_DISMISS_KEY = "whatsappBubbleDismissed";
+
+if (!localStorage.getItem(WHATSAPP_DISMISS_KEY)) {
+  setTimeout(() => {
+    whatsappBubble.classList.add("visible");
+  }, 1500);
+}
+
+whatsappBubbleClose.addEventListener("click", () => {
+  whatsappBubble.classList.remove("visible");
+  localStorage.setItem(WHATSAPP_DISMISS_KEY, "1");
+});
