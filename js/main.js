@@ -31,7 +31,7 @@ contactForm.addEventListener("submit", async (event) => {
     });
 
     if (response.ok) {
-      formStatus.textContent = "Thanks! We'll be in touch soon. 🧸";
+      formStatus.textContent = "Thanks! We'll be in touch soon. 🌈";
       formStatus.style.color = "#5f7757";
       contactForm.reset();
     } else {
@@ -42,4 +42,14 @@ contactForm.addEventListener("submit", async (event) => {
       "Something went wrong. Please email us directly at preesplaybook@gmail.com.";
     formStatus.style.color = "#c96449";
   }
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 600);
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });

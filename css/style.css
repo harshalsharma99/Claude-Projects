@@ -90,26 +90,47 @@ a { color: inherit; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
 }
 
-.brand-mark { font-size: 1.7rem; line-height: 1; }
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cream-deep);
+  border: 1px solid rgba(46, 36, 28, 0.08);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.brand-mark svg { width: 24px; height: 15px; }
+.site-footer .brand-mark { background: rgba(248, 243, 234, 0.1); border-color: rgba(248, 243, 234, 0.15); }
 
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
 
 .brand-name {
   font-family: "Fraunces", serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  line-height: 1;
   color: var(--ink);
+  letter-spacing: -0.005em;
 }
 
 .brand-kicker {
   font-size: 0.66rem;
-  letter-spacing: 0.09em;
+  font-weight: 700;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--clay-dark);
+  line-height: 1;
 }
 
 .primary-nav {
@@ -252,11 +273,13 @@ a { color: inherit; }
 .photo-feature figcaption {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 20px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.95rem;
-  background: linear-gradient(0deg, rgba(46,36,28,0.65), transparent);
+  padding: 22px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  background: linear-gradient(0deg, rgba(46,36,28,0.6), transparent);
 }
 
 /* Session gallery: three photos, natural ratios, generously spaced */
@@ -394,6 +417,7 @@ a { color: inherit; }
 }
 .activity svg { width: 18px; height: 18px; color: var(--clay-dark); stroke-width: 1.6; }
 
+.values-section { padding-bottom: 48px; }
 .values-section .activity-grid { margin-top: 2.25rem; }
 
 .coming-soon { background: linear-gradient(180deg, var(--cream-deep), var(--cream)); padding-bottom: 80px; }
@@ -459,6 +483,36 @@ a { color: inherit; }
 .site-footer .note { color: rgba(248, 243, 234, 0.65); margin: 0; }
 .site-footer strong { margin-left: 8px; font-family: "Fraunces", serif; font-weight: 500; }
 
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--ink);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft-lg);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.15s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover { background: var(--clay-dark); }
+.back-to-top svg { width: 20px; height: 20px; }
+
 /* Responsive */
 @media (max-width: 860px) {
   .nav-toggle { display: flex; }
@@ -496,11 +550,11 @@ a { color: inherit; }
   .joy-banner { aspect-ratio: 4 / 5; max-height: 420px; }
 
   /* On narrow screens the full panorama becomes too short to read faces,
-     so crop in a bit to keep the two groups of people large enough to see. */
+     so crop in a bit to keep everyone fully in frame and large enough to see. */
   .hero-banner img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    object-position: 50% 42%;
+    object-position: 50% 38%;
   }
 
   /* Swipeable carousel */
@@ -521,5 +575,19 @@ a { color: inherit; }
   .session-gallery .photo-feature {
     flex: 0 0 84%;
     scroll-snap-align: center;
+  }
+
+  /* The 5-pillars graphic has real baked-in text — shrinking it to viewport
+     width makes it unreadable, so let it scroll horizontally at a legible size. */
+  .banner-photo {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .banner-photo::-webkit-scrollbar { display: none; }
+  .banner-photo img {
+    width: auto;
+    height: 240px;
+    max-width: none;
   }
 }
