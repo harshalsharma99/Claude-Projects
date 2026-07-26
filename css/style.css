@@ -149,6 +149,20 @@ a { color: inherit; }
 
 .primary-nav a:hover { opacity: 1; }
 
+.nav-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b 45%, #6228d7);
+  opacity: 1 !important;
+  flex-shrink: 0;
+}
+.nav-instagram svg { width: 17px; height: 17px; color: #fff; }
+.nav-instagram:hover { transform: scale(1.08); }
+
 .nav-cta {
   background: var(--ink);
   color: #fff !important;
@@ -428,6 +442,35 @@ a { color: inherit; }
 .coming-soon { background: linear-gradient(180deg, var(--cream-deep), var(--cream)); padding-bottom: 80px; }
 .coming-soon .grid-3 { margin-top: 3rem; }
 
+/* Instagram follow section */
+.instagram-follow {
+  padding: 72px 0;
+  background: linear-gradient(160deg, #fff6e9 0%, #fdece9 45%, #f4e6f7 100%);
+  text-align: center;
+}
+.instagram-follow-inner { display: flex; flex-direction: column; align-items: center; }
+.instagram-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b 45%, #6228d7);
+  box-shadow: var(--shadow-soft-lg);
+  margin-bottom: 1.25rem;
+}
+.instagram-icon-badge svg { width: 32px; height: 32px; }
+.instagram-follow .lede { margin-left: auto; margin-right: auto; }
+.instagram-follow .btn-instagram { margin-top: 1.75rem; }
+
+.btn-instagram {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b 45%, #6228d7);
+  color: #fff;
+}
+.btn-instagram:hover { filter: brightness(1.08); }
+.btn-instagram svg { width: 20px; height: 20px; }
+
 /* Contact */
 .contact-section .two-col { align-items: center; }
 
@@ -487,6 +530,18 @@ a { color: inherit; }
 }
 .site-footer .note { color: rgba(248, 243, 234, 0.65); margin: 0; }
 .site-footer strong { margin-left: 8px; font-family: "Fraunces", serif; font-weight: 500; }
+
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.footer-instagram svg { width: 20px; height: 20px; }
+.footer-instagram:hover { color: var(--gold); }
 
 /* Back to top */
 .back-to-top {
