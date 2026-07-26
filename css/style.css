@@ -491,8 +491,8 @@ a { color: inherit; }
 /* Back to top */
 .back-to-top {
   position: fixed;
-  left: 24px;
-  bottom: 24px;
+  right: 26px;
+  bottom: 94px;
   z-index: 90;
   width: 46px;
   height: 46px;

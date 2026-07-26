@@ -45,22 +45,29 @@ contactForm.addEventListener("submit", async (event) => {
 });
 
 const backToTop = document.getElementById("backToTop");
+const whatsappBubble = document.getElementById("whatsappBubble");
+const whatsappBubbleClose = document.getElementById("whatsappBubbleClose");
+const WHATSAPP_DISMISS_KEY = "whatsappBubbleDismissed";
 
 window.addEventListener("scroll", () => {
-  backToTop.classList.toggle("visible", window.scrollY > 600);
+  const scrolledPastThreshold = window.scrollY > 600;
+  backToTop.classList.toggle("visible", scrolledPastThreshold);
+  // Back-to-top and the greeting bubble share the same corner, so hide
+  // the bubble once the user has scrolled far enough for both to collide.
+  if (scrolledPastThreshold) {
+    whatsappBubble.classList.remove("visible");
+  }
 });
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-const whatsappBubble = document.getElementById("whatsappBubble");
-const whatsappBubbleClose = document.getElementById("whatsappBubbleClose");
-const WHATSAPP_DISMISS_KEY = "whatsappBubbleDismissed";
-
 if (!localStorage.getItem(WHATSAPP_DISMISS_KEY)) {
   setTimeout(() => {
-    whatsappBubble.classList.add("visible");
+    if (window.scrollY <= 600) {
+      whatsappBubble.classList.add("visible");
+    }
   }, 1500);
 }
 
