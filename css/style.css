@@ -282,13 +282,18 @@ a { color: inherit; }
   background: linear-gradient(0deg, rgba(46,36,28,0.6), transparent);
 }
 
-/* Session gallery: three photos, natural ratios, generously spaced */
+/* Session gallery: three photos, all matched to the same size, generously spaced */
 .session-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-top: 2.75rem;
   align-items: start;
+}
+.session-gallery .photo-feature img {
+  aspect-ratio: 900 / 1024;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Joy banner: gentle crop close to the source ratio, biased to keep the child in frame */
