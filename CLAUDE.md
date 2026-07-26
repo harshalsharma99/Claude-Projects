@@ -16,3 +16,8 @@
   business; it's positioned as "chapter one" of a broader future brand,
   "Pree's Playbook" (planned: online child psychology sessions, baby
   product recommendations, workshops).
+- Cache-busting: index.html links css/style.css and js/main.js with a
+  `?v=N` query string. GitHub Pages' CDN and mobile browsers cache these
+  aggressively, which has caused the owner to see stale layouts after a
+  deploy. Bump `N` on every commit that changes style.css or main.js so
+  visitors always get the latest version instead of a stale cached copy.
