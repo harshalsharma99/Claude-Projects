@@ -583,6 +583,11 @@ a { color: inherit; }
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
+  /* This container's own box (including the gap and the hidden bubble's
+     reserved space) would otherwise sit on top of back-to-top and
+     intercept clicks meant for it. Only the actual visible buttons
+     inside should be clickable. */
+  pointer-events: none;
 }
 
 .whatsapp-fab {
@@ -593,6 +598,7 @@ a { color: inherit; }
   background: var(--whatsapp);
   display: flex;
   align-items: center;
+  pointer-events: auto;
   justify-content: center;
   box-shadow: var(--shadow-soft-lg);
   text-decoration: none;
