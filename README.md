@@ -7,7 +7,7 @@ food/product recommendations, workshops, and more).
 Plain HTML/CSS/JS — no build step, no dependencies. Open `index.html` in a
 browser or deploy as-is to any static host.
 
-Live at: https://harshalsharma99.github.io/Claude-Projects/
+Live at: https://preesplaybook.com/
 
 ## Contact setup (already configured)
 
