@@ -75,3 +75,28 @@ whatsappBubbleClose.addEventListener("click", () => {
   whatsappBubble.classList.remove("visible");
   localStorage.setItem(WHATSAPP_DISMISS_KEY, "1");
 });
+
+const shopGrid = document.getElementById("shopGrid");
+const shopPrev = document.getElementById("shopPrev");
+const shopNext = document.getElementById("shopNext");
+
+if (shopGrid && shopPrev && shopNext) {
+  const scrollByCard = (direction) => {
+    const card = shopGrid.querySelector(".kit-card");
+    const cardWidth = card ? card.getBoundingClientRect().width + 24 : 300;
+    shopGrid.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
+  };
+
+  shopPrev.addEventListener("click", () => scrollByCard(-1));
+  shopNext.addEventListener("click", () => scrollByCard(1));
+
+  const updateShopNavState = () => {
+    const maxScroll = shopGrid.scrollWidth - shopGrid.clientWidth - 60;
+    shopPrev.disabled = shopGrid.scrollLeft <= 0;
+    shopNext.disabled = shopGrid.scrollLeft >= maxScroll;
+  };
+
+  shopGrid.addEventListener("scroll", updateShopNavState);
+  window.addEventListener("resize", updateShopNavState);
+  updateShopNavState();
+}
