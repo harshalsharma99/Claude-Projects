@@ -716,9 +716,9 @@ a { color: inherit; }
 .shop-nav-next { right: -22px; }
 
 /* Combo card: reuses a collage of the existing product photos, no new image */
-.combo-card .kit-card-image { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2px; aspect-ratio: 16/9; }
-.combo-card .kit-card-image img { height: 100%; aspect-ratio: auto; }
-.combo-card .kit-collage-side { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; }
+.combo-card .kit-card-image { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2px; aspect-ratio: 16/9; overflow: hidden; }
+.combo-card .kit-card-image img { height: 100%; aspect-ratio: auto; min-width: 0; min-height: 0; }
+.combo-card .kit-collage-side { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; min-width: 0; min-height: 0; overflow: hidden; }
 .combo-card .kit-badge { background: var(--gold); }
 
 .kit-card {
