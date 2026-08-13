@@ -347,17 +347,6 @@ a { color: inherit; }
   margin: 0;
 }
 
-/* Banner photo (wide, full width within a section — used for the 5-pillars image) */
-.banner-photo {
-  margin: 0 0 2.5rem;
-  overflow: hidden;
-}
-.banner-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -908,20 +897,6 @@ a { color: inherit; }
   .session-gallery .photo-feature {
     flex: 0 0 84%;
     scroll-snap-align: center;
-  }
-
-  /* The 5-pillars graphic has real baked-in text — shrinking it to viewport
-     width makes it unreadable, so let it scroll horizontally at a legible size. */
-  .banner-photo {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .banner-photo::-webkit-scrollbar { display: none; }
-  .banner-photo img {
-    width: auto;
-    height: 240px;
-    max-width: none;
   }
 
   .shop-grid { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
