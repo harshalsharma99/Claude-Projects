@@ -21,3 +21,20 @@
   aggressively, which has caused the owner to see stale layouts after a
   deploy. Bump `N` on every commit that changes style.css or main.js so
   visitors always get the latest version instead of a stale cached copy.
+
+## Deployment / branches
+- `claude/prees-playbook-website-ygikvl` is production — GitHub Actions
+  deploys every push on this branch straight to the live site at
+  https://preesplaybook.com/ (custom domain via the root `CNAME` file,
+  DNS on Cloudflare).
+- `staging` is a Cloudflare Pages preview branch the owner can click
+  through on their own phone before anything goes live. Workflow for any
+  non-trivial change:
+  1. Commit and push the change to `staging` first.
+  2. Tell the owner to check the Cloudflare Pages preview URL and confirm
+     it looks right.
+  3. Only once approved, merge `staging` into
+     `claude/prees-playbook-website-ygikvl` and push — that's what
+     actually goes live on preesplaybook.com.
+  Trivial/low-risk copy or config tweaks can still go straight to the
+  production branch if the owner asks for that explicitly.
