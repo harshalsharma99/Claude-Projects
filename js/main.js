@@ -1,5 +1,9 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+function trackEvent(name, params) {
+  if (typeof gtag === "function") gtag("event", name, params);
+}
+
 const navToggle = document.getElementById("navToggle");
 const primaryNav = document.getElementById("primaryNav");
 
@@ -34,6 +38,7 @@ contactForm.addEventListener("submit", async (event) => {
       formStatus.textContent = "Thanks! We'll be in touch soon. 🌈";
       formStatus.style.color = "#5f7757";
       contactForm.reset();
+      trackEvent("contact_form_submit");
     } else {
       throw new Error("Form submission failed");
     }
@@ -100,3 +105,30 @@ if (shopGrid && shopPrev && shopNext) {
   window.addEventListener("resize", updateShopNavState);
   updateShopNavState();
 }
+
+document.querySelectorAll(".kit-cta").forEach((link) => {
+  link.addEventListener("click", () => {
+    const product = link.closest(".kit-card")?.querySelector("h3")?.textContent.trim() || "unknown";
+    trackEvent("kit_whatsapp_click", { product });
+  });
+});
+
+document.querySelectorAll(".slot-btn").forEach((link) => {
+  link.addEventListener("click", () => {
+    const day = link.closest(".slot-day")?.querySelector("h3")?.textContent.trim() || "unknown";
+    const time = link.textContent.trim();
+    trackEvent("slot_request_click", { day, time });
+  });
+});
+
+document.querySelectorAll('a[href*="instagram.com"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    trackEvent("instagram_click", { location: link.className || "unknown" });
+  });
+});
+
+document.querySelectorAll(".contact-section .btn-whatsapp, .whatsapp-fab").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackEvent("whatsapp_general_click", { location: link.className || "unknown" });
+  });
+});
